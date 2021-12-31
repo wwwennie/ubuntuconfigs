@@ -1,2 +1,2 @@
+set viminfo='1000,<1000,s80,h
 set number
-set viminfo='20,<1000

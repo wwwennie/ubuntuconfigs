@@ -107,7 +107,15 @@ export PYTHONPATH="/usr/bin/ase:$PYTHONPATH"
 export PYTHONPATH="/home/wwwennie/ase-espresso/lib/python3.6/site-packages:$PYTHONPATH"
 
 # for exec relating to UChicago research
-export PATH="/home/wwwennie/wwwennie@uchicago.edu/UChicago/bin/:$PATH"
+export PATH="/home/wwwennie/wwwennie@uchicago.edu/bin/:$PATH"
+export PATH="/home/wwwennie/wwwennie@uchicago.edu/bin/struct/:$PATH"
+export PATH="/home/wwwennie/wwwennie@uchicago.edu/bin/QEscripts/:$PATH"
+export PATH="/home/wwwennie/wwwennie@uchicago.edu/bin/plot/:$PATH"
+
+export PYTHONPATH="/home/wwwennie/wwwennie@uchicago.edu/bin/:$PYTHONPATH"
+export PYTHONPATH="/home/wwwennie/wwwennie@uchicago.edu/bin/struct/:$PYTHONPATH"
+export PYTHONPATH="/home/wwwennie/wwwennie@uchicago.edu/bin/QEscripts/:$PYTHONPATH"
+export PYTHONPATH="/home/wwwennie/wwwennie@uchicago.edu/bin/plot/:$PYTHONPATH"
 
 ### wwwennie
 alias ucsb="cd ~/wwwennie@gmail.com/UCSB"
@@ -120,9 +128,6 @@ alias uch="cd ~/wwwennie@uchicago.edu/UChicago/"
 # python environments
 alias py36="source activate py36"
 alias nopy36="source deactiviate"
-alias py35="source activate py35"
-alias nopy35="source deactiviate"
-
 
 # DoD computational resources
 alias sshthunder="/usr/local/ossh/bin/ssh wwwennie@thunder.afrl.hpc.mil"
@@ -131,12 +136,9 @@ alias sshlightning="/usr/local/ossh/bin/ssh wwwennie@lightning.afrl.hpc.mil"
 # CNSI
 alias sshguild="ssh -X wwwennie@guild.cnsi.ucsb.edu"
 alias sshcori="ssh -X wwwennie@cori.nersc.gov"
-alias ucsb="cd ~/wwwennie@gmail.com/UCSB"
-alias wo3="cd ~/wwwennie@gmail.com/UCSB/Research/Projects/WO3/"
-alias neuro="cd ~/wwwennie@uchicago.edu/UChicago/Research/Neuromorphic/"
-alias notes="cd ~/wwwennie@uchicago.edu/UChicago/1-LabNotebook/"
-alias uch="cd ~/wwwennie@uchicago.edu/UChicago/"
-alias vesta="~/VESTA-x86_64/VESTA &"
+alias vesta="~/VESTA-gtk3/VESTA &"
+alias airtame=". /home/wwwennie/airtame-application-3.2.2/launch-airtame.sh"
+alias xcrys="/home/wwwennie/xcrysden-1.5.60-bin-shared/xcrysden &"
 
 # DoD computational resources
 alias sshthunder="/usr/local/ossh/bin/ssh wwwennie@thunder.afrl.hpc.mil"
@@ -150,28 +152,13 @@ alias sshcori="ssh -X wwwennie@cori.nersc.gov"
 alias sshmw1="ssh -X wwwennie@midway1.rcc.uchicago.edu"
 alias sshmw2="ssh -X wwwennie@midway2.rcc.uchicago.edu"
 
+# ALCF clustrs
+alias sshmira="ssh -X wwwennie@mira.alcf.anl.gov"
+alias sshcetus="ssh -X wwwennie@cetus.alcf.anl.gov"
+
 # get ip address
 ipaddr() { (awk '{print $2}' <(ip a show | grep 'inet ')); }
 
-# UCSB vpn
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/pulse"
-
-# VESTA
-export PATH="/home/wwwennie/VESTA-x86_64/:$PATH"
-
-# research-related scripts
-export PATH="/home/wwwennie/wwwennie@uchicago.edu/bin/:$PATH"
-export PATH="/home/wwwennie/wwwennie@uchicago.edu/bin/struct:$PATH"
-export PATH="/home/wwwennie/wwwennie@uchicago.edu/bin/scripts:$PATH"
-export PYTHONPATH="/home/wwwennie/wwwennie@uchicago.edu/bin/:$PYTHONPATH"
-export PYTHONPATH="/home/wwwennie/wwwennie@uchicago.edu/bin/struct:$PYTHONPATH"
-export PYTHONPATH="/home/wwwennie/wwwennie@uchicago.edu/bin/scripts:$PYTHONPATH"
-export PATH="/home/wwwennie/wwwennie@uchicago.edu/bin/plot:$PATH"
-alias ubin="/home/wwwennie/wwwennie@uchicago.edu/bin/"
-
-# screenshot
-alias scrotclip="scrot -s ~/foo.png && xclip ~/foo.png && rm ~/foo.png"
-
-#export PYTHONPATH="/home/wwwennie/wwwennie@uchicago.edu/bin/:$PYTHONPATH"
-#export PYTHONPATH="/home/wwwennie/wwwennie@uchicago.edu/bin/struct:$PYTHONPATH"
-#export PYTHONPATH="/home/wwwennie/wwwennie@uchicago.edu/bin/plot:$PYTHONPATH"
+# mounting midway to local machine
+alias mw="sudo sshfs -o  allow_other -o IdentityFile=~/.ssh/id_rsa wwwennie@midway1.rcc.uchicago.edu:/home/wwwennie/scratch-midway2/ /home/wwwennie/midway1"
+alias umw="sudo umount /home/wwwennie/midway1/"

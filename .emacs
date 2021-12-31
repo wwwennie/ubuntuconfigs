@@ -248,12 +248,6 @@
 (linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'org-mode-hook 'linum-mode)
-;; word wrap in org-mode
-;;(add-hook 'org-mode-hook #'(lambda ()
-;;                             ;; make the lines in the buffer wrap around the edges of the screen.
-;;                             ;; to press C-c q  or fill-paragraph ever again!
-;;                             (visual-line-mode)
-;;                             (org-indent-mode)))
 
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist
